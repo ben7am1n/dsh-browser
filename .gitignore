@@ -1,0 +1,10 @@
+node_modules/
+lib/
+coverage/
+browser-screenshots/
+*.tgz
+.env
+.env.*
+!.env.example
+.DS_Store
+*.log

@@ -1,0 +1,58 @@
+{
+  "name": "dsh-browser",
+  "version": "0.1.0",
+  "description": "Browser automation for DeepSeek Harness: Playwright-powered open/click/type/screenshot/eval tools so the agent can drive real web pages.",
+  "type": "module",
+  "main": "lib/index.js",
+  "types": "lib/types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./lib/types/index.d.ts",
+      "default": "./lib/index.js"
+    },
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ben7am1n/dsh-browser.git"
+  },
+  "homepage": "https://github.com/ben7am1n/dsh-browser#readme",
+  "bugs": {
+    "url": "https://github.com/ben7am1n/dsh-browser/issues"
+  },
+  "license": "MIT",
+  "keywords": [
+    "dsh-plugin",
+    "browser",
+    "playwright",
+    "automation"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "prepare": "npm run build",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "^4.0.1"
+  },
+  "dependencies": {
+    "playwright-core": "^1.49.0"
+  },
+  "devDependencies": {
+    "@deepseek-ai/cordis": "^4.0.1",
+    "@types/node": "^22.0.0",
+    "typescript": "^5.9.3"
+  }
+}

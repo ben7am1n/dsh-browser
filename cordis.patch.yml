@@ -1,0 +1,18 @@
+# dsh-browser bundle patch: mounts the plugin into a dsh profile composition.
+# The plugin registers `browser_*` tools into the shared `tools` registry.
+#
+# Install: `dsh plugin --profile <name> add dsh-browser`
+- insert:
+    - id: browser
+      name: dsh-browser
+      config:
+        # Browser launch strategy. Options:
+        #   - channel: 'chrome' | 'msedge' | 'chromium' (use an installed
+        #     browser channel; Chrome/Edge are found automatically)
+        #   - executablePath: absolute path to a browser binary
+        #   - default: try chromium channel, then 'chrome', then 'msedge'
+        # launch: chromium
+        # Timeout for launch/navigation in milliseconds.
+        # navigationTimeoutMs: 30000
+        # Viewport size for the browser window.
+        # viewport: { width: 1280, height: 800 }
