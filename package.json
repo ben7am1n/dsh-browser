@@ -1,6 +1,6 @@
 {
   "name": "dsh-browser",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Browser automation for DeepSeek Harness: Playwright-powered open/click/type/screenshot/eval tools so the agent can drive real web pages.",
   "type": "module",
   "main": "lib/index.js",
@@ -45,13 +45,18 @@
     "typecheck": "tsc -p tsconfig.json --noEmit"
   },
   "peerDependencies": {
-    "@deepseek-ai/cordis": "^4.0.1"
+    "@deepseek-ai/cordis": "^4.0.1",
+    "@deepseek-ai/dsh-agent": "^0.1.0-rc.6",
+    "@deepseek-ai/dsh-tools": "^0.1.0-rc.6"
   },
   "dependencies": {
+    "@deepseek-ai/schemastery": "^3.18.1",
     "playwright-core": "^1.49.0"
   },
   "devDependencies": {
     "@deepseek-ai/cordis": "^4.0.1",
+    "@deepseek-ai/dsh-agent": "^0.1.0-rc.6",
+    "@deepseek-ai/dsh-tools": "^0.1.0-rc.6",
     "@types/node": "^22.0.0",
     "typescript": "^5.9.3"
   }
